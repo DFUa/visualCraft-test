@@ -20,7 +20,7 @@ export default {
     ...mapActions(["startGame"]),
     resetGame() {
       let answer = prompt("enter the number of elements", 6);
-      if (+answer) {
+      if (answer > 0 && +answer) {
         this.startGame(answer);
       } else {
         this.resetGame();
